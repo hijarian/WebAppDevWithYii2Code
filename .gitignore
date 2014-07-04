@@ -1,0 +1,6 @@
+runtime/
+vendor/
+.vagrant/
+.idea/
+tests/_output/
+web/assets/
