@@ -1,0 +1,8 @@
+{
+    "require": {
+        "codeception/codeception": "*",
+        "fzaninotto/faker": "*",
+        "yiisoft/yii2": "*"
+    },
+    "minimum-stability" : "dev"
+}
