@@ -49,6 +49,7 @@ class CRMServicesManagementSteps extends \AcceptanceTester
     {
         $I = $this;
         $I->click('button[type=submit]');
+        $I->wait(1);
     }
 
     public function seeIAmInListServicesUi()
@@ -148,6 +149,7 @@ class CRMServicesManagementSteps extends \AcceptanceTester
             'Delete'
         );
         $I->click($xpath);
+        $I->wait(1);
     }
 
 }
