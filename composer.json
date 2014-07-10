@@ -2,7 +2,9 @@
     "require": {
         "codeception/codeception": "*",
         "fzaninotto/faker": "*",
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "*",
+        "netwing/selenium-server-standalone": "*",
+        "yiisoft/yii2-gii": "*"
     },
     "minimum-stability" : "dev"
 }
