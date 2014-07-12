@@ -15,11 +15,15 @@ return [
             'showScriptName' => false
         ],
         'view' => [
+            'theme' => [
+                'class' => yii\base\Theme::className(),
+                'basePath' => '@app/themes/snowy',
+            ],
             'renderers' => [
                 'md' => [
                     'class' => 'app\utilities\MarkdownRenderer'
                 ]
-            ]
+            ],
         ],
         'response' => [
             'formatters' => [
