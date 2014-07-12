@@ -20,6 +20,13 @@ return [
                     'class' => 'app\utilities\MarkdownRenderer'
                 ]
             ]
+        ],
+        'response' => [
+            'formatters' => [
+                'yaml' => [
+                    'class' => 'app\utilities\YamlResponseFormatter'
+                ]
+            ]
         ]
     ],
     'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php')
