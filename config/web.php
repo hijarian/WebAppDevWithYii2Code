@@ -13,6 +13,13 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false
+        ],
+        'view' => [
+            'renderers' => [
+                'md' => [
+                    'class' => 'app\utilities\MarkdownRenderer'
+                ]
+            ]
         ]
     ],
     'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php')
