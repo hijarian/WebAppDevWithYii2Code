@@ -6,4 +6,12 @@
 
 class_name: FunctionalTester
 modules:
-    enabled: [Filesystem, FunctionalHelper]
+    enabled: [Db, Filesystem, FunctionalHelper]
+    config:
+      Db:
+        dsn: 'mysql:host=localhost;dbname=crmapp'
+        user: 'root'
+        password: 'mysqlroot'
+        dump: tests/_data/dump.sql
+
+
