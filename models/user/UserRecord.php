@@ -48,7 +48,8 @@ class UserRecord extends \yii\db\ActiveRecord
     {
         $return = parent::beforeSave($insert);
 
-        $this->password = Yii::$app->security->generatePasswordHash($this->password);
+        if ($this->isAttributeChanged('password'))
+            $this->password = Yii::$app->security->generatePasswordHash($this->password);
 
         return $return;
     }
