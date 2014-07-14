@@ -153,5 +153,4 @@ class CRMUsersManagementSteps extends \AcceptanceTester
         $I->click($xpath);
         $I->wait(1);
     }
-
 }
