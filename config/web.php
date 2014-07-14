@@ -31,6 +31,9 @@ return [
                     'class' => 'app\utilities\YamlResponseFormatter'
                 ]
             ]
+        ],
+        'user' => [
+            'identityClass' => 'app\models\user\UserRecord'
         ]
     ],
     'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php')
