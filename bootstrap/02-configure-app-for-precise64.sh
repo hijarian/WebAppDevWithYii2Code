@@ -11,6 +11,7 @@ DB_NAME=crmapp
 # Creating database
 # NOTE the absence of the space between `-p` flag and the password!
 mysql -u ${DB_USER} -p${DB_PASS} -e "create database if not exists ${DB_NAME} default character set utf8 default collate utf8_unicode_ci";
+mysql -u ${DB_USER} -p${DB_PASS} -e "create database if not exists ${DB_NAME}_test default character set utf8 default collate utf8_unicode_ci";
 
 # Copy the prepared Apache config from codebase to the Apache config folder.
 cp -f /vagrant/bootstrap/frontend.apache2.conf /etc/apache2/sites-enabled/

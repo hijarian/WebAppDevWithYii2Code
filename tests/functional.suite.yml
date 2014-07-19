@@ -9,7 +9,7 @@ modules:
     enabled: [Db, Filesystem, FunctionalHelper]
     config:
       Db:
-        dsn: 'mysql:host=localhost;dbname=crmapp'
+        dsn: 'mysql:host=localhost;dbname=crmapp_test'
         user: 'root'
         password: 'mysqlroot'
         dump: tests/_data/dump.sql
