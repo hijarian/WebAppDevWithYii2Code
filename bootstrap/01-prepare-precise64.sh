@@ -39,6 +39,11 @@ apt-get update
 # `git` is required because we will use Composer from inside Vagrant VM
 apt-get install -y apache2 php5 vim mysql-client mysql-server php5-mysqlnd git php5-curl php5-mcrypt
 
+# Installing required software for running acceptance tests via Selenium directly on the deploy target.
+# This is not a good idea overall, but this way you will be able to run
+# both acceptance and functional tests from the same console.
+apt-get install -y openjdk-7-jre-headless xvfb firefox
+
 # Has to remove default virtual host listening on 80 port (HAS to be done before restarting Apache)
 rm -rf /etc/apache2/sites-enabled/*
 
