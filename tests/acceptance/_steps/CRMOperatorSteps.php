@@ -1,8 +1,11 @@
 <?php
 namespace AcceptanceTester;
 
-class CRMOperatorSteps extends \AcceptanceTester
+class CRMOperatorSteps extends CRMGuestSteps
 {
+    public $username = 'AnnieManager';
+    public $password = 'Shiny 3 things hmm, vulnerable';
+
     function amInAddCustomerUi()
     {
         $I = $this;

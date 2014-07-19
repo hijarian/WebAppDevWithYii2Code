@@ -15,6 +15,7 @@ $I->fillCustomerDataForm($second_customer);
 $I->submitCustomerDataForm();
 
 $I->seeIAmInListCustomersUi();
+$I->logout();
 
 $I = new \AcceptanceTester\CRMUserSteps($scenario);
 $I->wantTo('query the customer info using his phone number');

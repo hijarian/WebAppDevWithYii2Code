@@ -1,8 +1,11 @@
 <?php
 namespace AcceptanceTester;
 
-class CRMUserSteps extends \AcceptanceTester
+class CRMUserSteps extends CRMGuestSteps
 {
+    public $username = 'JoeUser';
+    public $password = '7 wonder @ American soil';
+
     function amInQueryCustomerUi()
     {
         $I = $this;
@@ -39,43 +42,5 @@ class CRMUserSteps extends \AcceptanceTester
         $I = $this;
         $text = $I->grabTextFrom('p'); // naive selector
         $I->seeContentIsLong($text);
-    }
-
-    public function seeIAmInLoginFormUi()
-    {
-        $I = $this;
-        $I->seeCurrentUrlEquals('/site/login');
-    }
-
-    public function fillLoginForm($user)
-    {
-        $I = $this;
-        $I->fillField('LoginForm[username]', $user['UserRecord[username]']);
-        $I->fillField('LoginForm[password]', $user['UserRecord[password]']);
-    }
-
-    public function submitLoginForm()
-    {
-        $I = $this;
-        $I->click('button[type=submit]');
-        $I->wait(1);
-    }
-
-    public function seeIAmAtHomepage()
-    {
-        $I = $this;
-        $I->seeCurrentUrlEquals('/');
-    }
-
-    public function seeUsername($user)
-    {
-        $I = $this;
-        $I->see($user['UserRecord[username]']);
-    }
-
-    public function dontSeeUsername($user)
-    {
-        $I = $this;
-        $I->dontSee($user['UserRecord[username]']);
     }
 }
