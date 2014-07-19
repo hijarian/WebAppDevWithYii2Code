@@ -5,6 +5,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision :shell, :path => "bootstrap/01-prepare-precise64.sh"
   config.vm.provision :shell, :path => "bootstrap/02-configure-app-for-precise64.sh"
+  config.vm.provision :shell, :path => "bootstrap/03-configure-app.sh"
 
   config.vm.network "forwarded_port", guest: 80, host: 8888
 
