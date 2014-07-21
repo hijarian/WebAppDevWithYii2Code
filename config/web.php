@@ -25,6 +25,9 @@ return [
                 ]
             ],
         ],
+        'request' => [
+            'cookieValidationKey' => 'your secret key here',
+        ],
         'response' => [
             'formatters' => [
                 'yaml' => [
