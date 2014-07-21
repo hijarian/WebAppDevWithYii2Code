@@ -6,8 +6,13 @@ return [
         'gii' => [
             'class' => 'yii\gii\Module',
             'allowedIPs' => ['*']
+        ],
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'allowedIPs' => ['*']
         ]
     ],
+    'bootstrap' => ['debug'],
     'components' => [
         'db' => require(__DIR__ . '/db.php'),
         'urlManager' => [
