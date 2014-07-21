@@ -10,6 +10,9 @@ return [
         'debug' => [
             'class' => 'yii\debug\Module',
             'allowedIPs' => ['*']
+        ],
+        'api' => [
+            'class' => 'app\api\ApiModule'
         ]
     ],
     'bootstrap' => ['debug'],
