@@ -50,6 +50,32 @@ return [
             'class' => 'yii\rbac\DbManager',
             'defaultRoles' => ['guest'],
         ],
+        'mail' => [
+            'class' => yii\swiftmailer\Mailer::className(),
+            'messageConfig' => [
+                'charset' => 'UTF-8',
+                'from' => 'noreply@crmapp.me'
+            ],
+            'transport' => [
+                'class' => 'Swift_MailTransport',
+            ],
+        ],
+        'log' => [
+            'traceLevel' => 3,
+            'targets' => [
+                'all_messages' => [
+                    'class' => 'yii\log\FileTarget',
+                    'levels' => ['info', 'trace', 'warning', 'error']
+                ],
+                'problems' => [
+                    'class' => \yii\log\EmailTarget::className(),
+                    'levels' => \yii\log\Logger::LEVEL_ERROR,
+                    'message' => [
+                        'to' => 'pm@crmapp.us'
+                    ]
+                ]
+            ],
+        ],
     ],
     'extensions' => require(__DIR__ . '/../vendor/yiisoft/extensions.php')
 ];
