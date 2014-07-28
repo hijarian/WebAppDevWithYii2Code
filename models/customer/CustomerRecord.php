@@ -28,4 +28,12 @@ class CustomerRecord extends ActiveRecord
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+            'timestamp' => \yii\behaviors\TimestampBehavior::className(),
+            'blame' => \yii\behaviors\BlameableBehavior::className()
+        ];
+    }
+
 }
