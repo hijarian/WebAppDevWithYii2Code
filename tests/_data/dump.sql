@@ -37,7 +37,7 @@ CREATE TABLE `auth_assignment` (
 
 LOCK TABLES `auth_assignment` WRITE;
 /*!40000 ALTER TABLE `auth_assignment` DISABLE KEYS */;
-INSERT INTO `auth_assignment` VALUES ('admin','3',1405923177),('manager','2',1405923177),('user','1',1405923177);
+INSERT INTO `auth_assignment` VALUES ('admin','3',1406541451),('manager','2',1406541451),('user','1',1406541451);
 /*!40000 ALTER TABLE `auth_assignment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +69,7 @@ CREATE TABLE `auth_item` (
 
 LOCK TABLES `auth_item` WRITE;
 /*!40000 ALTER TABLE `auth_item` DISABLE KEYS */;
-INSERT INTO `auth_item` VALUES ('admin',1,'Can do anything including managing users',NULL,NULL,1405923177,1405923177),('guest',1,'Nobody',NULL,NULL,1405923177,1405923177),('manager',1,'Can manage entities in database, but not users',NULL,NULL,1405923177,1405923177),('user',1,'Can use the query UI and nothing else',NULL,NULL,1405923177,1405923177);
+INSERT INTO `auth_item` VALUES ('admin',1,'Can do anything including managing users',NULL,NULL,1406541451,1406541451),('guest',1,'Nobody',NULL,NULL,1406541451,1406541451),('manager',1,'Can manage entities in database, but not users',NULL,NULL,1406541451,1406541451),('user',1,'Can use the query UI and nothing else',NULL,NULL,1406541451,1406541451);
 /*!40000 ALTER TABLE `auth_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,7 +170,7 @@ CREATE TABLE `migration` (
 
 LOCK TABLES `migration` WRITE;
 /*!40000 ALTER TABLE `migration` DISABLE KEYS */;
-INSERT INTO `migration` VALUES ('m000000_000000_base',1405923175),('m140506_102106_rbac_init',1405923176),('m140704_074257_init_customer_table',1405923176),('m140704_074646_init_phones_table',1405923176),('m140710_083424_init_services_table',1405923176),('m140713_053357_create_user_table',1405923176),('m140714_050445_add_auth_key_to_user',1405923176),('m140718_063423_add_predefined_users',1405923177),('m140719_083354_create_roles_for_predefined_users',1405923177);
+INSERT INTO `migration` VALUES ('m000000_000000_base',1406541449),('m140506_102106_rbac_init',1406541450),('m140704_074257_init_customer_table',1406541450),('m140704_074646_init_phones_table',1406541450),('m140710_083424_init_services_table',1406541450),('m140713_053357_create_user_table',1406541450),('m140714_050445_add_auth_key_to_user',1406541450),('m140718_063423_add_predefined_users',1406541451),('m140719_083354_create_roles_for_predefined_users',1406541451);
 /*!40000 ALTER TABLE `migration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,7 +249,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'JoeUser','$2y$13$QuVwSCjeMWQ9K2wwm5UpZOucjL4lDJcxNjBJVncBTAM3DpH..6XR.','33UgKyBr4Et3RK9D-UEl8MgHru6E9Tcbm2x6xTZ7eucgNVTYXLRBG4uXwDs7Q5Gt6QWb3lX0taXhBP0Lo7oYwf09--iYkYX2hKZAZRmGSM7kp5ufn0DHcHVy4dA3zzCr0byVSUcqPGGt_x2A1P5C5kVmmJzJlZgW29U4_UNCFnFR8kPkVQVxnK9uWl8fJ_CzbVkoct__gQMsSNrAdU0X3wAC_jFXMRAklB-WQIUMUhjBBqHepb_QTXKB0KD2BOT'),(2,'AnnieManager','$2y$13$ujaf3TP5gRSOgwPiLekEU.htAbXsVHYYYtXaIYQ/dAMsekEONtRaa','iGhHH_d1DbYAk6HoRFWWAzKIBXTGllM8geI0tNIZaW7Vir6L93PIcUDRoVA7bJViI0IjtbyLAACFKKfiVXu-KqMWawNW2ftKsGm9347ktkX4Yd912MeEOY1J_Fft1LQI5oHJD2W4d3AFdaHCzbGVn_5LuInfDX3b2cR72f1wlekIGKvkO2-pqP1X-cRij1olxQoX90r01dvfTG35x498Nj8TfpjLI9A0LQ80KUNm4Y0QogIW5O06_8Io4xqLSTd'),(3,'RobAdmin','$2y$13$gVGjzxoLfA/92MIiDCxQxODCu0HmENJmQM/NrOagA4JN3aNaihk6q','Rvp-05yZx4EH4TgEOXqWEdljaoHPl2rAevd8ny6oNe9C-npnS3_EkFC2NEwFmZYCFPt2DaQXsPYK3pYwYTVdJ9vd-nm7ORHytb6tMUEI0yss7i2vvJ-Qvv7aOkaTBcAnK467CszY47z5v4rc8q58ohWZupU08Z7fmlvRPI2kNT6dfspG2Lis-oFHtPUSdl3Iu96z4W7RE6b-q-c7z99MMl6lKVloIMf82aOWSrGCUEh5SO_sl5CF-v_upJbwhYV');
+INSERT INTO `user` VALUES (1,'JoeUser','$2y$13$3WKf3DmFpRUllS93Row0keZskWGL.NxhGfBzD/DlKD/w8KssaYNOi','bHAiA2o7Db58ZpWjBCNpoL-VYdd9zN0I07_uLWyky7tD_hRPPhzIigDZ9hi8X7Wde5I4FobYf8lQIvcjcQdvPSVOcD7BHZVjVhAqRfrYEgFGIM2Ww_j7CNRo3DZJ-DaeORVmq-6ybHAPW_pO5LGWOuKqt3Lspz_zyp_l14VxxmNWRqlZsj_2lm4kI5pP1tAHzaUJIrjZdEJssCmuW01zAn0K9djvinPhHnq12eqfiL_07LSIWJefLXeFLmr3ij3'),(2,'AnnieManager','$2y$13$JAsSRA8Twvh/NzvCpKcxJO5xvaDGGv80gj8Tr9Oecwxj/2Q50gBPq','ABJzOWKbp4eMkJWLAvm_6JuDrzXoeWUSSRjy4JzXzoSK1CVEK-jg8XpN-m-at-zaboVodNkBzcqPIS26QjWZGMVzCLVC5n10RFo7KYLilsLE6X05bREBZt7zIeRaWxe26mlGJMRj-2ylsG-lhX92gUmFk7M3zCaTzLDIjxxuIk40eir03jxU34ZdjS9NIcHfbWB7DFa_fYw4gFHAbvWVw8sZPONaZuKc7X9qHgvFOjaPQ8a2XcquyWGzje6aBd_'),(3,'RobAdmin','$2y$13$LoPogMGhfPxHjFMRqAsnru7TU0PfFvnESCDyiIAxez0Psv/fKHxS6','rFvSq8kedT9loK0NenpP_5wZju7fiUms_G5pQI4GyYL5A_CMG2yFQbRZ0N5uEAZZUmUMjN4GoNdQblvalwVUPlvcnfj2_aab2dBxhL9hFsznc2OOCLlvrELx-4HRsp8REwBgp6CACjvUvqXM8EUDW2VWMY7d0f1keg21-67BybAdlpXdfdoIfP7CIsbw8XEuFeKFTeqi_JLcz5QOtcpRxC6rYrNYOYiEpPm_9XmXvQeJa9VtmHCSMc6E2PJskqA');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -262,4 +262,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-07-21  6:12:57
+-- Dump completed on 2014-07-28  9:57:31
