@@ -64,7 +64,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
             ],
 
-            ['class' => 'app\utilities\AuditColumn'],
+            [
+                'class' => 'app\utilities\AuditColumn',
+                'attribute' => 'id'
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
