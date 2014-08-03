@@ -54,6 +54,6 @@ class EmailRecord extends \yii\db\ActiveRecord
      */
     public function getCustomer()
     {
-        return $this->hasOne(Customer::className(), ['id' => 'customer_id']);
+        return $this->hasOne(CustomerRecord::className(), ['id' => 'customer_id']);
     }
 }

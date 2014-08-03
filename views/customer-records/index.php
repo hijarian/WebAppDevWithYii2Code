@@ -30,6 +30,40 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'birth_date',
                 'format' => ['date', 'jS M, Y'],
             ],
+            [
+                'label' => 'Addresses',
+                'format' => 'paragraphs',
+                'value' => function ($model) {
+                        $result = '';
+                        foreach ($model->addresses as $address) {
+                            $result .= $address->fullAddress . "\n\n";
+                        }
+                        return $result;
+                    }
+            ],
+            [
+                'label' => 'Emails',
+                'format' => 'paragraphs',
+                'value' => function ($model) {
+                        $result = '';
+                        foreach ($model->emails as $email) {
+                            $result .= $email->address . "\n\n";
+                        }
+                        return $result;
+                    }
+            ],
+            [
+                'label' => 'Phones',
+                'format' => 'paragraphs',
+                'value' => function ($model) {
+                        $result = '';
+                        foreach ($model->phones as $phone) {
+                            $result .= $phone->number . "\n\n";
+                        }
+                        return $result;
+                    }
+            ],
+
             ['class' => 'app\utilities\AuditColumn'],
 
             ['class' => 'yii\grid\ActionColumn'],
