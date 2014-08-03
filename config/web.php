@@ -23,6 +23,9 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'customer/<id:\d+>' => 'customer-records/view',
+                [
+                    'class' => 'app\utilities\UsernameUrlRule'
+                ]
             ]
         ],
         'view' => [
