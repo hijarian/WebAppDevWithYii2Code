@@ -6,3 +6,4 @@ tests/_output/
 web/assets/
 config/db.php
 config/test.php
+config/overrides/local.php
