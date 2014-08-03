@@ -12,6 +12,9 @@ use app\models\customer\CustomerRecord;
  */
 class CustomerRecordSearch extends CustomerRecord
 {
+
+    public $country;
+
     /**
      * @inheritdoc
      */
@@ -19,7 +22,7 @@ class CustomerRecordSearch extends CustomerRecord
     {
         return [
             [['id', 'created_at', 'created_by', 'updated_at', 'updated_by'], 'integer'],
-            [['name', 'birth_date', 'notes'], 'safe'],
+            [['name', 'birth_date', 'notes', 'country'], 'safe'],
         ];
     }
 
@@ -52,7 +55,7 @@ class CustomerRecordSearch extends CustomerRecord
         }
 
         $query->andFilterWhere([
-            'id' => $this->id,
+            'customer.id' => $this->id,
             'birth_date' => $this->birth_date,
             'created_at' => $this->created_at,
             'created_by' => $this->created_by,
@@ -62,6 +65,10 @@ class CustomerRecordSearch extends CustomerRecord
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'notes', $this->notes]);
+
+        $query->andWhere(['like', 'address.country', $this->country]);
+
+        $query->joinWith('addresses');
 
         return $dataProvider;
     }

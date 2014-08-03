@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date', 'jS M, Y'],
             ],
             [
+                'attribute' => 'country',
                 'label' => 'Addresses',
                 'format' => 'paragraphs',
                 'value' => function ($model) {
