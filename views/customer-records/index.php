@@ -30,8 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'birth_date',
                 'format' => ['date', 'jS M, Y'],
             ],
-            'id',
-
+            ['class' => 'app\utilities\AuditColumn'],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
