@@ -43,6 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
             ],
             [
+                'attribute' => 'email',
                 'label' => 'Emails',
                 'format' => 'paragraphs',
                 'value' => function ($model) {
@@ -54,6 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
             ],
             [
+                'attribute' => 'phone',
                 'label' => 'Phones',
                 'format' => 'paragraphs',
                 'value' => function ($model) {

@@ -50,6 +50,24 @@ class CustomerRecordSearch extends CustomerRecord
             'query' => $query,
         ]);
 
+        $query->joinWith('addresses');
+        $dataProvider->sort->attributes['country'] = [
+            'asc' => ['address.country' => SORT_ASC],
+            'desc' => ['address.country' => SORT_DESC]
+        ];
+
+        $query->joinWith('emails');
+        $dataProvider->sort->attributes['email'] = [
+            'asc' => ['email.address' => SORT_ASC],
+            'desc' => ['email.address' => SORT_DESC],
+        ];
+
+        $query->joinWith('phones');
+        $dataProvider->sort->attributes['phone'] = [
+            'asc' => ['phone.number' => SORT_ASC],
+            'desc' => ['phone.number' => SORT_DESC],
+        ];
+
         if (!($this->load($params) && $this->validate())) {
             return $dataProvider;
         }
@@ -68,7 +86,6 @@ class CustomerRecordSearch extends CustomerRecord
 
         $query->andWhere(['like', 'address.country', $this->country]);
 
-        $query->joinWith('addresses');
 
         return $dataProvider;
     }
