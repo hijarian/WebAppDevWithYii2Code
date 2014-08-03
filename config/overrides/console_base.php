@@ -7,4 +7,10 @@ return [
             'class' => '\yii\rbac\DbManager'
         ]
     ],
+    'controllerMap' => [
+        'migrate' => [
+            'class' => 'yii\console\controllers\MigrateController',
+            'templateFile' => '@app/views/layouts/migration.php'
+        ]
+    ]
 ];
