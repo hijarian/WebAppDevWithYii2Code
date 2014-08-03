@@ -6,8 +6,8 @@ cd /vagrant
 # Install all prerequisites, including Yii
 php composer.phar install --prefer-dist
 
-# Copy the prepared config snippet for database connection to the configuration tree
-cp bootstrap/db.php config/
+# Copy the prepared config snippets to the configuration tree
+cp bootstrap/local.php config/overrides/
 
 # Copy the prepared config snippet for test database connection to the configuration tree
 cp bootstrap/test.php config/
