@@ -20,7 +20,10 @@ return [
         'db' => require(__DIR__ . '/db.php'),
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false
+            'showScriptName' => false,
+            'rules' => [
+                'customer/<id:\d+>' => 'customer-records/view',
+            ]
         ],
         'view' => [
             'theme' => [
