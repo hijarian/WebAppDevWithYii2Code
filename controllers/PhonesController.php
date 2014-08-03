@@ -16,4 +16,5 @@ use yii\filters\VerbFilter;
 class PhonesController extends SubmodelController
 {
     public $recordClass = 'app\models\customer\PhoneRecord';
+    public $relationAttribute = 'customer_id';
 }

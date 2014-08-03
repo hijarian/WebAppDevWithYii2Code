@@ -15,6 +15,9 @@ class SubmodelController extends Controller
     /** @var string Name of the class to be manipulated */
     public $recordClass;
 
+    /** @var string Name of the attribute which will store the given relation ID */
+    public $relationAttribute;
+
     public function behaviors()
     {
         return [
@@ -42,15 +45,17 @@ class SubmodelController extends Controller
     /**
      * Creates a new submodel.
      * If creation is successful, the browser will be redirected to the 'view' page.
+     * @param string $relation_id
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($relation_id)
     {
         /** @var ActiveRecord $model */
         $model = new $this->recordClass;
+        $model->{$this->relationAttribute} = $relation_id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->goBack();
 
         return $this->render('create', compact('model'));
     }
@@ -66,7 +71,7 @@ class SubmodelController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save())
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->goBack();
 
         return $this->render('update', compact('model'));
     }
@@ -81,7 +86,7 @@ class SubmodelController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->goBack();
     }
 
     /**

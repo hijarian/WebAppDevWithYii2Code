@@ -12,8 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'customer_id')->textInput() ?>
-
     <?= $form->field($model, 'number')->textInput(['maxlength' => 255]) ?>
 
     <div class="form-group">
